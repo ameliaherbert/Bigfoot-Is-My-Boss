@@ -1,0 +1,30 @@
+﻿title: Tutorial
+---
+<<heart 2_heart 10>>
+System: Welcome to the tutorial! First things first, press the "continue" button to continue.
+System: Great job!
+System: This is where character dialogue will be shown.
+Right here!: That is where the names of the speaker will be shown.
+System: This story is told from first person pov.
+System: Your name is Y/N (stands for "your name")
+System: When prompted for choices, simply click which option you would like your character to say.
+System: Let's practice.
+System: How are you?
+->Good
+    Y/N: Good!
+    System: That's great to hear!
+->Meh
+    Y/N: Meh.
+    System: Same... same.
+->Bad
+    Y/N: Awful!!
+    System: Oh no! Hopefully playing this game can help cheer you up :(
+System: Be careful which options you pick, as some will have an impact on the ending of the story.
+<<heart 2_heart -9>>
+System: Keep track of heart symbols, as those represent how much romance you have with that character.
+System: Try to keep it positive!
+System: You can also hit escape to pause.
+System: Now, I think that's all for now!
+System: Have fun playing!
+<<menu Canvas>>
+===

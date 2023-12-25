@@ -1,0 +1,1364 @@
+﻿title: Start
+---
+<<FadeOut BlackScreen>>
+<<mcemote MCcharacter none>>
+<<pemote Pcharacter none>>
+<<jemote Jcharacter none>>
+<<declare $MCRomanceMeter to 0>>
+<<declare $ProtagRomanceMeter to 0>>
+<<declare $BigfootRomanceMeter to 0>>
+<<declare $Investigation to 0>>
+<<declare $JimothySide = false>>
+<<declare $MCSide = false>>
+<<declare $ProtagSide = false>>
+<<background bgs street>>
+<<heart JheartObject 0>>
+<<heart MCheartObject 0>>
+<<heart PheartObject 0>>
+<<declare $ProtagDate to false>>
+<<declare $MCDate to false>>
+Skip intro scene?
+->yes
+    <<jump Intro>>
+->no
+You run along the sidewalk, sweat beading down your perfectly perfect face, hair bouncing with each stride.
+“I’m late, I’m late!!” You think to yourself, “On my first day nonetheless!”
+That’s right, today is your first day working at PRESS OFFICE NAME!
+While it may seem like a mere soul-sucking nine-to-five office job that would make you regret your life choices every day until the ripe age of retireme-
+Oh wait, silly me! Retirement doesn’t exist in this world.
+In any case, while this job may not be as glamorous as what you’d hoped for, it was the only place that didn’t ghost you after an interview, so a win is a win.
+You puff out your chest as you run--with a piece of toast in your mouth, might I add.
+Today is the start of something great.
+GPS: Take a right into the dark ass spooky ass woods.
+<<background bgs forest>>
+You feel...
+->Worried
+    Those woods are in fact dark and spooky.
+    Putting on a brave face, you make your way through the tall grass, hoping you don’t run into any spider webs.
+->Brave
+    Without thinking, you run straightforward, consequently eating shit as you trip over a rock.
+    Looking around to ensure no one saw you, you stand up and brush yourself off.
+As you continue forward into the dark woods, you can’t shake the feeling that you aren’t alone.
+“Damn you, scary woods,” you think to yourself.
+Suddenly, you come across a river, water flowing rapidly.
+<<background bgs river>>
+You almost continue your journey when all of a sudden you see what can only be described as the hairiest, tallest gentleman you’ve ever set your eyes on. 
+->Not to mention most handsome...
+    You can’t help but wonder what it would be like to run away with this fine specimen of a… man? Creature?
+->What the fuck is that.
+    What the fuck is that.
+It appears to be bathing in the water, flipping its hair in what looks like slow motion…?
+You wonder how that’s even possible.
+Done bathing, the creature makes its way to shore.
+As it rises from the water, you notice something peculiar.
+His feet are massive.
+I’m talking grade-a mountain climbers.
+In a moment of shock, you realize that this creature is not merely a creature nor a man.
+He’s Bigfoot.
+*The* Bigfoot.
+GPS: **Take a left**
+Your GPS goes off, somehow the volume has been turned up to max.
+Hearing the noise, Bigfoot whips his head around, searching for the source.
+You quickly scamper away, hoping he didn’t see you staring.
+You have a nagging feeling that this day is only going to get weirder.
+<<jump Intro>>
+===
+
+title: Intro
+---
+<<background bgs elevator>>
+Unknown: Hey! Hey! Hold the elevator!
+You look over your shoulder and see your childhood best friend, Protag.
+<<pemote Pcharacter happy>>
+Protag: Y/N, hey!
+Y/N: Protag! How are you?!
+Protag: I’m chilling! I’m so excited we’re gonna be working together! How are you feeling?
+->Better now that you're here.
+    <<set $ProtagRomanceMeter += 1>>
+    <<heart PheartObject 1>>
+    <<pemote Pcharacter flustered>>
+    You can’t help but notice a slight blush on his face.
+->Nervous!
+    <<pemote Pcharacter happy>>
+    Protag chuckles.
+->Why do you care?
+    <<set $ProtagRomanceMeter -= 1>>
+    <<heart PheartObject -1>>
+    <<pemote Pcharacter sad>>
+    You roll your eyes at the frown on his face.
+*Ding!*
+<<background bgs office>>
+You step off the elevator, Protag close behind, rambling.
+<<pemote Pcharacter happy>>
+Protag: In any case, I’m sure you’ll do great!
+Protag: *Whispers* Just make sure to get on MC’s good side…
+Y/N: Who’s MC?
+<<protagposition Pcharacter left>>
+<<mcposition MCcharacter right>>
+<<mcemote MCcharacter bored>>
+MC: Um, that would be me.
+<<pemote Pcharacter frightened>>
+Protag: Ah MC, we were definitely not just talking about you!
+<<pemote Pcharacter flustered>>
+Protag sheepishly smiles.
+<<pemote Pcharacter happy>>
+<<mcemote MCcharacter judgy>>
+Looking you up and down, MC crosses her arms.
+<<mcemote MCcharacter judgemental>>
+MC: So, you must be Jimothy’s new assistant.
+->Yeah, and what about it?
+    <<set $MCRomanceMeter += 1>>
+    <<heart MCheartObject 1>>
+    <<mcemote MCcharacter mad>>
+    MC tries to sputter out a response but her words are garbled and not cohesive.
+->Yes, nice to meet you.
+    <<mcemote MCcharacter bored>>
+    <<set $MCRomanceMeter -= 1>>
+    <<heart MCheartObject -1>>
+    MC rolls her eyes and walks away.
+    MC: Yeah, whatever.
+->I am.
+    <<mcemote MCcharacter judgy>>
+    MC: Hmph!
+<<mcemote MCcharacter chatty>>
+MC: Let’s just get to the meeting before Jimothy starts roaring at us again.
+You make a mental note of her word usage. 
+Y/N: Roaring?
+<<mcemote MCcharacter bored>>
+MC: Yeah, it’s like his thing. He roars. Just like how Protag’s thing is being a little bitch.
+<<pemote Pcharacter sad>>
+Protag: Hey wtf
+Skip dialogue?
+->Yes
+    <<jump Next>>
+->No
+<<pemote Pcharacter happy>>
+<<background bgs meetingRoom>>
+Walking into the meeting room, you notice a shadowy figure, looming over the conference table.
+Arms perched out to the side, it almost looks as though someone caught a blurry photo of it mid-walk.
+Following Protag and MC’s leads, you sit down.
+Jimothy: Ladies, gentlemen, and everything in between…
+The figure turns around with such force that his arms swing everything within a 5 foot radius flying off the table.
+<<jemote Jcharacter happy>>
+Jimothy: Let’s welcome our newest team member, Y/N!
+He makes eyecontact with you and it feels as if there’s electricity being passed between you two.
+A second goes by, and you continue to stare.
+Y/N: Bigfoot?
+<<jemote Jcharacter confused>>
+Jimothy: I- um-
+He sputters, pushing up his glasses.
+Protag: Y/N, how did you guess what our newest story is going to be!
+<<jemote Jcharacter mad>>
+Bigfoot: WHAT??
+<<mcemote MCcharacter bored>>
+MC: Yeah.
+She rolls her eyes.
+MC: Protag over here had this stupid idea that our next story should be about Bigfoot.
+Protag: Yes! We’ll catch him out in the woods and have the story of a lifetime!
+MC: I was against it at first, as Bigfoot-
+She glances over at Protag
+<<pemote Pcharacter mad>>
+<<mcemote MCcharacter judgy>>
+MC: obviously doesn’t exist…
+<<jemote Jcharacter sad>>
+Jimothy gulps loudly.
+<<mcemote MCcharacter chatty>>
+MC: But then I realized that that must be proven as well! So, Jimothy, I’d like to propose a story about how Bigfoot does not exist.
+<<pemote Pcharacter mad>>
+Protag: I’VE SEEN HIM WITH MY OWN EYES
+<<mcemote MCcharacter mad>>
+MC: FOR THE LAST TIME, YOU SAW A FUCKING CAT. OUTSIDE OF YOUR PLACE IN THE CITY. WHERE BIGFOOT. DOESN’T. LIVE.
+The two start bickering and you can’t keep track of anything going on.
+You look at Jimothy.
+He stares down at his (large) feet.
+<<jump Next>>
+===
+
+title: Next
+---
+<<pemote Pcharacter happy>>
+<<jemote Jcharacter happy>>
+<<mcemote MCcharacter judgy>>
+Lost in thought, you completely miss what Protag says to you.
+Y/N: Sorry?
+<<pemote Pcharacter sad>>
+Protag: Come on, Y/N, you gotta be on my side! He’s real, isn’t he?!
+<<mcemote MCcharacter bored>>
+MC: Nuh uh
+<<pemote Pcharacter mad>>
+Protag: FUCK YOU MEAN NUH UH??
+Protag: Y/N, who do you side with?!
+->Protag
+    <<pemote Pcharacter happy>>
+    <<set $ProtagRomanceMeter += 1>>
+    <<heart PheartObject 1>>
+    <<set $ProtagSide = true>>
+    Protag: Haha!! Glad to see you believe in what really matters.
+->MC
+    <<set $MCRomanceMeter += 1>>
+    <<heart MCheartObject 1>>
+    <<set $MCSide = true>>
+    MC: Ha, suck it
+    <<pemote Pcharacter sad>>
+    Protag: Does our friendship mean nothing to you?!
+->Bigfoot ??
+    <<set $JimothySide = true>>
+    You point at Jimothy.
+    <<jemote Jcharacter confused>>
+    Y/N: Guys he’s right there.
+    The two stare at you for a moment before bursting out laughing.
+    <<pemote Pcharacter happy>>
+    <<mcemote MCcharacter chatty>>
+    Protag: You’re so funny, Y/N!!
+    MC: Yeah, you almost had me there BAHAHAH!
+<<pemote Pcharacter happy>>
+Skip dialogue?
+->Yes
+    <<jump Morning1>>
+->No
+Jimothy: *Clears throat* Well, if the two of you really want to run these stories… I guess I have no choice but to let you.
+With a few more insults thrown toward each other, Protag and MC scamper out of the room, thinking of ideas on how to go about their new endeavors.
+<<pemote Pcharacter none>>
+<<mcemote MCcharacter none>>
+Jimothy: Y/N.
+You look up at the tall specimen. You notice how blinding his baby blue eyes are.
+Y/N: Y-yes?
+Jimothy walks slowly toward you, causing you to take a step back, only to bump into the wall behind you.
+Jimothy places his hand beside your head.
+Jimothy: Forget everything you saw this morning.
+You stare, awestruck.
+Jimothy: I’m letting those fools run their stories so as to not come across as suspicious.
+Jimothy: But if word actually gets out that I’m… you know…
+He gestures toward his feet.
+Jimothy: They’ll take away my position here… No one wants a monster running their company. I just ask that if they try to reel you in, maybe you could throw them off the path a bit
+Y/N: I understand
+Jimothy: Thank you, Y/N…
+He slumps down, head almost touching your shoulder.
+Jimothy: Thank you.
+You stare a second longer, taking in his unbreaking gaze.
+Y/N: I should go…
+Jimothy suddenly realizes how close you two are, and he blushes before backing away.
+Jimothy: Y-yes.
+You leave the room, stealing one last glance at him.
+Why are there so many hot people at this office?
+<<jump Morning1>>
+===
+
+title: Morning1
+---
+<<mcemote MCcharacter none>>
+<<pemote Pcharacter none>>
+<<jemote Jcharacter none>>
+<<background bgs office>>
+Each day, you’ll get the chance to talk to one person of your choosing!
+Keep track of your romance and suspicion meters as you choose your responses.
+The higher romance points you have for each person, the better chance you have getting to romance them!
+Try to keep suspicion of Jimothy as low as possible.
+Who would you like to talk to?
+->MC
+	<<jump MCMorning>>
+->Protag
+    <<protagposition Pcharacter middle>>
+    <<pemote Pcharacter happy>>
+    Protag: Hey, y/n, how’s your first day going so far?!
+    Y/N: It sure is interesting here!
+    Protag: Yup, with a human boss like Jimothy (the human) everyday is a new normal adventure!
+    Y/N: Yes of course…
+    Protag: Hey, don’t be nervous, ok?
+    Y/N: ok.
+    Protag: ok.
+    Protag: It’ll be just like class in elementary school, but with less crayons.
+    You pull out a grimmy stuby forest green crayon.
+    Y/N: Are you sure about that?
+    You wink at him.
+    <<pemote Pcharacter sad>>
+    Protag tears up.
+    Protag: I can’t believe you still have that…
+    ->Flirty
+        Y/N: Well, when someone so handsome gives you a gift, it’s hard to let it go.
+        <<set $ProtagRomanceMeter += 1>>
+        <<heart PheartObject 1>>
+        <<pemote Pcharacter flustered>>
+        Protag: That’s beautiful, you should write a dating sim or something
+        Y/N: No, that’s lame.
+    ->Nostalgic
+        Y/N: Yeah, I miss drawing on the walls with you
+        Protag: I’m sure we can do it if Jimothy’s not looking.
+    -> Indifferent
+        Y/N: Yeah, I keep forgetting to get a new one. This one’s gross.
+        <<pemote Pcharacter sad>>
+        <<set $ProtagRomanceMeter -= 1>>
+        <<heart PheartObject -1>>
+        Protag: Oh.
+    <<jump ProtagChoice>>
+->Jimothy
+    <<jemote Jcharacter happy>>
+    You get a phone call from your desk.
+    Y/N: Hello?
+    <<jemote Jcharacter flipped>>
+    Jimothy: Y/N! How's your work day going?
+    You look over at the windows to his office and see him sitting at his desk.
+    The phone looks tiny in his above averagely-sized hands.
+    Y/N: Um, good! Was just about to grab lunch!
+    <<jemote Jcharacter happy>>
+    Jimothy: Perfect! Why don't you come on over and we can keep each other company for a little while.
+    He hangs up the phone leaving you slightly confused.
+    Y/N: Um, ok...
+    <<background bgs jOffice>>
+    You walk into Jimothy's office.
+    Y/N: Hello, sir.
+    Jimothy: Please, no need to be so formal.
+    Jimothy: You know me better than everyone already, given that you know my biggest secret and all...
+    Y/N: Oh yeah...
+    Jimothy: ...
+    <<jemote Jcharacter sad>>
+    Jimothy: You haven't... told anyone, have you?
+    Jimothy: I know you said you wouldn't, but...
+    ->Not yet...
+        Y/N: Not if you give me a raise!
+        <<set $BigfootRomanceMeter -= 1>>
+        <<heart JheartObject -1>>
+        <<romanceSlider InvestigationSlider 1>>
+        <<jemote Jcharacter mad>>
+        Jimothy: How dare you talk to me that way!
+        Jimothy: Forget this little lunch date, get out of my office!
+        You walk out feeling confident, but looking like a jackass.
+    ->No
+        Y/N: I haven't, I honestly forgot about it.
+        <<jemote Jcharacter sad>>
+        Jimothy: Oh, ok, that's fine.
+        You sit down in a chair and start eating.
+        You both eat in silence.
+        Once finished, you gather your belongings and make your way to the door.
+        <<jemote Jcharacter happy>>
+        Jimothy: Thanks for not telling anyone, Y/N.
+        You smile.
+        Y/N: Anytime.
+    ->Of course not
+        <<set $BigfootRomanceMeter += 1>>
+        <<heart JheartObject 1>>
+        <<set $Investigation -= 1>>
+        <<romanceSlider InvestigationSlider -1>>
+        Jimothy: Thank you, Y/N-
+        He goes quiet.
+        Looking up, you realize something is wrong.
+        He puts his hands on his throat and starts coughing.
+        You realize he's choking!
+        Without thinking, you get up and begin performing the Heimlich Maneuver.
+        After a couple seconds, the onion that he was eating flies out of his mouth, landing in a trashcan nearby.
+        Jimothy finishes coughing.
+        Jimothy: Y/N... you saved me.
+        Y/N: Of course.
+        You finish eating and say goodbye to Jimothy before going back to your desk.
+    <<jump EndOfDay>>
+===
+
+title: ProtagChoice
+---
+<<pemote Pcharacter happy>>
+Protag: Anyways, thanks for the chat. I gotta go get back to breaking the Bigfoot case!
+Protag: Say, have you ever seen him before, or know anyone who has?
+->Yes
+    Y/N: He’s literally our boss.
+    <<pemote Pcharacter confused>>
+    Protag stares at you for a moment.
+    Protag: …
+    <<pemote Pcharacter mad>>
+    Protag: You really need to stop making stuff up about your superior.
+    Protag: Anyway… I’m gonna get back to work.
+    <<set $Investigation += 1>>
+    <<romanceSlider InvestigationSlider 1>>
+->Nope
+    Y/N: Nope, but I’ll let you know if it comes up!
+    <<set $Investigation -= 1>>
+    <<romanceSlider InvestigationSlider -1>>
+    Protag: Haha, you’re awesome, Y/N!
+<<pemote Pcharacter none>>
+You feel a flutter in your stomach as he walks by you.
+You make a note of his watermelon scent.
+<<jump EndOfDay>>
+===
+title: MCMorning
+---
+You walk up to MC, unsure of what to say.
+	MC shuffles around her papers, seemingly stuck in thought.
+    <<mcposition MCcharacter middle>>
+    <<mcemote MCcharacter bored>>
+	MC: …
+    <<mcemote MCcharacter mad>>
+	MC: AGH! You scared me...
+    <<mcemote MCcharacter judgy>>
+	MC rolls her eyes.
+    MC: What are you doing here?
+    You catch a glimpse of a doodle of an eye on her paper that she quickly sweeps under a nearby stack.
+    <<mcemote MCcharacter bored>>
+    MC: Can you pass me the stapler?
+    ->Ignore her
+        Y/N: …
+        <<mcemote MCcharacter bored>>
+        MC: *Huffs* Fine, I’ll get it myself.
+    ->Sure thing!
+        <<heart MCheartObject -1>>
+        <<set $MCRomanceMeter -= 1>>
+        <<mcemote MCcharacter bored>>
+        You hand her the stapler and she immediately smashes it into your hand, staple penetrating your skin.
+        Y/N: That wasn’t very nice
+        <<mcemote MCcharacter chatty>>
+        MC: Get used to it
+    ->What’s in it for me?
+        <<set $MCRomanceMeter += 1>>
+        <<heart MCheartObject 1>>
+        <<mcemote MCcharacter mad>>
+        MC stares at you as her face slowly turns crimson.
+        MC: I- uh- um- never mind.
+        She reaches across you and grabs the stapler herself.
+    <<mcemote MCcharacter bored>>
+    You catch the scent of rain from her hair.
+    You wonder what kind of shampoo she uses.
+    You turn to walk away, as she is clearly bothered by your presence when MC suddenly grabs your arm.
+    MC: Not so fast, creepo.
+    You flinch at the odd nickname.
+    MC: So what’s your deal, huh?
+    <<if $JimothySide is true>>
+        <<mcemote MCcharacter judgy>>
+        MC: You come waltzing in here claiming that our own boss is some horrible monster.
+        <<mcemote MCcharacter chatty>>
+        MC: On your first day, might I add!
+        MC: Why would you make such accusations?
+        ->Caught up in the moment
+            Y/N: I was caught up in the momnent, ok?!
+            Y/N: With Protag screaming at me, I said what first came to mind!
+            <<mcemote MCcharacter bored>>
+            MC: But why did that come to mind?
+            ->I don't know...
+                You stay silent, praying that she'll let go of your arm.
+                MC: Interesting...
+                <<set $Investigation += 1>>
+                <<romanceSlider InvestigationSlider 1>>
+            ->Scary
+                Y/N: The boss is scary, ok!
+                Y/N: He's got long arms like bigfoot, so my brain just made the connection...
+                <<mcemote MCcharacter chatty>>
+                MC: PFT
+                MC starts laughing hysterically, tears forming in her eyes.
+                <<mcemote MCcharacter chatty>>
+                MC: You're scared of Jimothy AND Bigfoot?!
+                MC: Having you here is just perfect timing, then.
+                She pats your arm.
+                MC: Glad to have you here, creeperina.
+                <<set $Investigation -= 1>>
+                <<romanceSlider InvestigationSlider -1>>
+        ->The facts.
+            Y/N: I'm just stating the facts, what I know I know.
+            <<mcemote MCcharacter judgy>>
+            MC: And what would that be?
+            Y/N whispers.
+            Y/N: Our boss is literally Bigfoot.
+            <<mcemote MCcharacter bored>>
+            MC: You need to figure yourself out, my friend.
+            MC: A lot of people in this office care an awful lot about Jimothy, so you claiming these wild things is just...
+            MC: Absurd!
+            MC: Now get out of here.
+            <<set $Investigation += 2>>
+            <<romanceSlider InvestigationSlider 2>>
+    <<elseif $MCSide is true>>
+        <<mcemote MCcharacter bored>>
+        MC: You're trying to get on my good side or something?
+        <<mcemote MCcharacter judgy>>
+        MC: Because it won't work. Hmph!
+        MC: Are you really also a nonbeliever?
+        ->He's 100% not real
+            MC: Good, then you have sense.
+            <<set $Investigation -= 1>>
+            <<romanceSlider InvestigationSlider -1>>
+            She goes back to work.
+        ->I don't know...
+            MC: Interesting...
+            MC: Protag must've brainwashed you...
+            MC: Unless there's something else you're not telling us...
+            An evil grin forms on MC's lips.
+            MC: You have a horrible poker face.
+            <<set $Investigation += 1>>
+            <<romanceSlider InvestigationSlider 1>>
+    <<elseif $ProtagSide is true>>
+        <<mcemote MCcharacter bored>>
+        MC: You some big conspiracy theorist like Protag or something?
+        MC: Do you really believe in this nonsense?
+        ->He's 100% not real
+            MC: Good, then you have sense.
+            <<set $Investigation -= 1>>
+            <<romanceSlider InvestigationSlider -1>>
+            She goes back to work.
+        ->I don't know...
+            <<mcemote MCcharacter bored>>
+            MC: Interesting...
+            <<mcemote MCcharacter judgy>>
+            MC: Protag must've brainwashed you...
+            <<mcemote MCcharacter bored>>
+            MC: Unless there's something else you're not telling us...
+            An evil grin forms on MC's lips.
+            MC: You have a horrible poker face.
+            <<set $Investigation += 1>>
+            <<romanceSlider InvestigationSlider 1>>
+    <<else>>
+        MC: Do you believe in Bigfoot, yes or no?
+        ->Yes
+            Y/N: Yeah, sure.
+            <<mcemote MCcharacter bored>>
+            MC: Interesting...
+            <<mcemote MCcharacter judgy>>
+            MC: Protag must've brainwashed you...
+            <<mcemote MCcharacter bored>>
+            MC: Unless there's something else you're not telling us...
+            An evil grin forms on MC's lips.
+            MC: You have a horrible poker face.
+            <<set $Investigation += 1>>
+            <<romanceSlider InvestigationSlider 1>>
+        ->No
+            <<mcemote MCcharacter chatty>>
+            MC: Good, then you have sense.
+            <<set $Investigation -= 1>>
+            <<romanceSlider InvestigationSlider -1>>
+            She goes back to work.
+    <<endif>>
+    <<mcemote MCcharacter judgy>>
+    You stand there for a second longer and watch MC go back to work.
+    That was... odd... to say the least.
+    <<jump EndOfDay>>
+===
+title: test
+---
+<<protagposition Pcharacter left>>
+<<mcposition MCcharacter right>>
+<<mcemote MCcharacter judgy>>
+<<heart heartObject 0>>
+<<pemote Pcharacter happy>>
+<<jemote Jcharacter happy>>
+MC: I love you
+<<set $MCRomanceMeter += 3>>
+<<heart MCheartObject 3>>
++3 romance
+Jimothy: I hate you
+<<set $JRomanceMeter -= 2>>
+<<heart JheartObject -2>>
+-2 romance
+Protag: I kind of like you?
+<<set $PRomanceMeter -= 1>>
+<<heart PheartObject -1>>
+-1 romance
+<<romanceSlider InvestigationSlider 2>>
+<<set $Investigation += 2>>
++2 Suspicion Points
+<<credits Canvas>>
+===
+title: End
+---
+ENDING: BECAUSE OF YOUR SCORE YOU END UP WITH......
+<<if $BigfootRomanceMeter > $ProtagRomanceMeter && $BigfootRomanceMeter > $MCRomanceMeter>>
+    Bigfoot: You are my one true love let us run away together forever.
+<<elseif $ProtagRomanceMeter > $BigfootRomanceMeter && $ProtagRomanceMeter > $MCRomanceMeter>>
+    Protag: Yippee! Let's go out!
+<<elseif $MCRomanceMeter > $ProtagRomanceMeter && $MCRomanceMeter > $BigfootRomanceMeter>>
+    MC: Fine, let's go out.
+<<elseif $MCRomanceMeter == $ProtagRomanceMeter && $MCRomanceMeter > $BigfootRomanceMeter>>
+    You end up with MC and Protag.
+<<elseif $MCRomanceMeter == $BigfootRomanceMeter && $MCRomanceMeter > $ProtagRomanceMeter>>
+    You end up with MC and Jimothy.
+<<elseif $BigfootRomanceMeter == $ProtagRomanceMeter && $BigfootRomanceMeter > $MCRomanceMeter>>
+    You end up with Protag and Jimothy.
+<<elseif $BigfootRomanceMeter == $ProtagRomanceMeter && $BigfootRomanceMeter == $MCRomanceMeter>>
+    Yay, you end up with everyone!
+<<endif>>
+===
+title: EndOfDay
+---
+<<background bgs office>>
+<<mcemote MCcharacter none>>
+<<pemote Pcharacter none>>
+<<jemote Jcharacter none>>
+End of day.
+<<if $Investigation >= 1>>
+    <<jump highInvestigation>>
+<<elseif $ProtagRomanceMeter < 1 && $MCRomanceMeter < 1>>
+    <<jump noDate>>
+<<elseif $ProtagRomanceMeter > $MCRomanceMeter>>
+    <<jump ProtagDate1>>
+<<elseif $ProtagRomanceMeter == $MCRomanceMeter>>
+    <<protagposition Pcharacter left>>
+    <<mcposition MCcharacter right>>
+    <<mcemote MCcharacter judgy>>
+    <<pemote Pcharacter happy>>
+    MC & Protag: Y/N!
+    Y/N: ?!
+    Protag: We have something to ask you!
+    <<mcemote MCcharacter bored>>
+    MC: Yeah, yeah, listen-
+    <<pemote Pcharacter happy>>
+    Protag: Would you rather go to an AWESOME amusement park or-
+    MC: A nice calm, relaxing aquarium?
+    Protag: I may or may not have an extra ticket to Shartland!!
+    <<mcemote MCcharacter bored>>
+    MC: ...
+    <<pemote Pcharacter mad>>
+    Protag: STOP. IT'S AN ACRONYM.
+    MC: FOR WHAT??
+    <<pemote Pcharacter happy>>
+    Protag: Silly Happy Amusement park with Real Thrill!!
+    MC: Wouldn't that be SHAPWRT??
+    <<pemote Pcharacter sad>>
+    Protag: That doesn't roll off the tongue.
+    <<mcemote MCcharacter judgy>>
+    MC: Oh my god.
+    MC: Anyways, I coincidentally also have an extra ticket to the aquarium.
+    <<pemote Pcharacter happy>>
+    Protag: Ha, and that place doesn't even HAVE a name!
+    <<mcemote MCcharacter bored>>
+    MC: The author's lazy ok?
+    <<pemote Pcharacter confused>>
+    Protag: What?
+    MC: What?
+    Y/N: What?
+    <<pemote Pcharacter happy>>
+    <<mcemote MCcharacter chatty>>
+    MC: Anyways. I totally didn't buy this as an excuse to ask you out or anything, ok?!
+    Y/N: I-
+    MC: DROP IT
+    She blsuhes profusely.
+    You look at the pair as they uncomfortably squirm under your gaze.
+    Who do you want to go out with?
+    ->MC
+        <<jump MCYes>>
+    ->Protag
+        <<jump ProtagYes>>
+<<else>>
+    <<mcposition MCcharacter middle>>
+    <<mcemote MCcharacter judgy>>
+    MC: Hey, Y/N, listen.
+    Y/N: I'm listening.
+    <<mcemote MCcharacter worried>>
+    MC: G-good!
+    MC: I have a proposal for you!
+    MC: I have this extra ticket for the aquarium and I...
+    MC: UGH IT'S SO STUPID
+    Y/N: No it's not.
+    MC sighs and collects herself.
+    MC: Do you want to come with me?
+    ->Yes
+        Yes!
+        <<jump MCYes>>
+    ->No
+        <<jump noDate>>
+<<endif>>
+===
+
+title: ProtagDate1
+---
+<<protagposition Pcharacter middle>>
+    <<pemote Pcharacter happy>>
+    Protag: Hey, Y/N! I had a quick little question for you!
+    Y/N: Yeah, what’s up?
+    Protag: Well, I was actually wondering if maybe you…
+    <<pemote Pcharacter sad>>
+    Protag: I don’t know…
+    You put a hand on his shoulder.
+    Y/N: What’s wrong, Protag?
+    His eyes dart up to yours.
+    <<pemote Pcharacter happy>>
+    Protag: N-nothing’s wrong! I was just wondering if…
+    He takes in a deep breath.
+    <<jump ProtagNext>>
+===
+
+title: ProtagNext
+---
+Protag: If maybe you wanted to go to the amusement park with me?
+->Accept
+	<<jump ProtagYes>>
+->Decline
+	Y/N: No.
+    <<pemote Pcharacter sad>>
+    Protag: Oh... ok...
+    <<pemote Pcharacter none>>
+    Protag runs away sobbing.
+    <<jump NoDate>>
+===
+
+title: ProtagYes
+---
+<<set $ProtagDate = true>>
+<<background bgs amusementPark>>
+<<protagposition Pcharacter middle>>
+<<mcemote MCcharacter none>>
+<<pemote Pcharacter happy>>
+Walking into the amusement park, you’re overwhelmed by sights and sounds.
+Protag reaches for your hand.
+<<pemote Pcharacter happy>>
+Protag: Don’t get lost in the crowd!
+He guides you to the carousel.
+Protag: This’ll be fun!
+You can’t help but chuckle.
+Of course this was Protag’s ride of choice, with the bright colors and lights and all.
+You spend the rest of the night riding rides and playing games with Protag.
+You giggle with him as he walks you home.
+<<background bgs street>>
+<<pemote Pcharacter happy>>
+Protag: That was fun!
+Y/N: Indeed!
+Protag: Anyway, Y/N… there was another thing I wanted to ask you…
+Y/N: Alright, shoot.
+Protag: I was wondering if you’d like to be my-
+<<pemote Pcharacter confused>>
+His words trail off as his eyes shift to a figure in the woods behind you.
+Protag: OH MY GOD IT’S BIGFOOT
+<<pemote Pcharacter none>>
+He begins running after the figure.
+Y/N: Protag, slow down!
+You shout, but to no avail. Within an instant, you’ve lost sight of him.
+Suddenly MC zooms past you, shouting for Protag.
+What's she doing here?
+<<jump BigfootConvo>>
+===
+
+title: MCYes
+---
+<<set $MCDate = true>>
+<<background bgs aquarium>>
+<<pemote Pcharacter none>>
+<<mcposition MCcharacter middle>>
+<<mcemote MCcharacter chatty>>
+Walking into the aquarium, you look up at all the fish tanks surrounding you.
+MC pulls out her map.
+<<mcemote MCcharacter chatty>>
+MC: Ok, first things first! Penguins!
+She grabs your hand and guides you to the penguin exhibit.
+You stand there, looking at the little guys dive into the water.
+MC presses her face against the glass.
+Her acting childish was certainly nothing new, but seeing her act this way made a warmth grow in your chest.
+After a few minutes, she drags you to the deep sea creatures exhibit.
+You walk around, looking at the fish, while stealing glances at MC.
+You watch as she gets excited about the smallest of fish, and you see the fear in her eyes as she looks at the bigger ones.
+Coming across the shark exhibit, you laugh as she steers you away, clearly afraid of what's inside.
+You spend the next few hours running around the aquarium with MC, trying not to laugh at all the cute quirks she displays.
+Finally, it's time to leave, and she insists on walking you home.
+<<background bgs street>>
+<<mcemote MCcharacter chatty>>
+MC: Ahhhh, I haven't gone to the aquarium in so long, that was fun!
+She looks at you and smiles.
+Y/N: Yeah it was!
+MC: Listen, if you'd like to, I was wondering if-
+Something behind you catches her eye.
+<<mcemote MCcharacter bored>>
+MC: Protag?
+You turn around catch a glimpse of Protag weaving in and out of the trees in the forest.
+It looks like he's chasing another figure?
+Oh fuck.
+Before you know it, MC's chasing after him.
+Y/N: Shit.
+You murmur to yourself before running into the woods yourself.
+<<jump BigfootConvo>>
+===
+
+title: BigfootConvo
+---
+<<background bgs forest>>
+<<mcemote MCcharacter none>>
+<<pemote Pcharacter none>>
+Running aimlessly through the woods, you wonder if you'll get lost?
+No time for that.
+You only have one thought on your mind.
+Protect Jimothy’s identity.
+*CRASH*
+<<jemote Jcharacter happy>>
+Knocked to the ground, you lift your head up, making eye contact with none other than Jimothy.
+<<jemote Jcharacter sad>>
+Jimothy sighs in relief.
+Jimothy: Oh, it’s just you, y/n
+Y/N: “Just me?”
+<<jemote Jcharacter confused>>
+Jimothy: I… ah- I
+He blushes. 
+Although it’s only been a few hours since you’ve seen the tall, husky bloke you realize how much you missed staring at his big, bulbous… muscles.
+Without thinking, you leap into Jimothy’s arms, he let’s out a small gasp in surprise. The embrace doesn’t last long, as you hear MC and Protag shouting for you in the distance.
+Y/N: I-I tried to stop them!
+You press your face into Bigfoot’s chest as tears form in your eyes. 
+You can feel the smooth, warm skin of his shirt window on your nose.
+<<jemote Jcharacter happy>>
+Jimothy: Shhhh…
+Jimothy rubs your back with his hand. 
+Jimothy: You know, I kind of knew this would happen eventually.
+You pull yourself away to look him in the eye. 
+Y/N: Jimothy… what are you talking about?
+He pauses for a second, pulling his big, round blue orbs away from you.
+<<jemote Jcharacter sad>>
+Jimothy: MC and Protag are two of my greatest employees.
+He smiles.
+<<jemote Jcharacter happy>>
+Jimothy: I should have known I wouldn’t be able to fly under the radar so easily.
+Somewhere out in the forest, the shouting MC and Protag fade into the background.
+Jimothy: You know, y/n, my whole life I’ve been running, and cheating, and doing anything I could to hide from the person I truly am… or should I say the monster I truly am… 
+Y/N: You’re not a monster.
+<<jemote Jcharacter sad>>
+Jimothy sighs.
+Jimothy: I… I think I am, actually.
+Jimothy: But I’ve come to realize that maybe that doesn’t matter.
+Jimothy: Because I trust that those I’ve grown close to will accept me no matter what I am.
+You become more and more alarmed as he straightens himself up, above average-sized feet slapping the ground with such force you feel a mini earthquake.
+Y/N: Jimothy… Does this mean…?
+<<jemote Jcharacter happyflipped>>
+Jimothy: I’m doing what I should’ve done long ago…
+Jimothy: Y/N… 
+Jimothy looks down at you, teary-eyed.
+<<jemote Jcharacter sad>>
+Jimothy: Thank you for keeping my secret safe.
+He draws in a huge breath.
+Jimothy: I’M OVER HERE!!
+<<background bgs forest>>
+<<protagposition Pcharacter left>>
+<<mcposition MCcharacter right>>
+<<mcemote MCcharacter judgy>>
+<<pemote Pcharacter happy>>
+MC: So let me get this straight-
+<<mcemote MCcharacter worried>>
+MC: YOU WERE BIGFOOT THIS WHOLE TIME?!
+<<jemote Jcharacter sad>>
+Jimothy: Yeah… I hope you guys aren’t too angry at me for keeping it from you.
+<<pemote Pcharacter happy>>
+Protag: Are you kidding?! This great!
+Protag: I can’t believe I was right about you existing!
+<<mcemote MCcharacter bored>>
+MC: Yeah, I may have been wrong, but this is a way cooler outcome.
+<<jemote Jcharacter happy>>
+Jimothy: Wow, thank you guys.
+Jimothy: I know this is a lot to ask, now that you know my true identity-
+Jimothy takes a breath.
+<<jemote Jcharacter sad>>
+Jimothy: I’d really like it if I were to continue being your boss. I know you might not want me anymore though, so it’s totally fine if-
+<<pemote Pcharacter happy>>
+Protag: Are you kidding?! You’re the best boss ever! The office would be in shambles if it weren’t for you! We need you.
+<<mcemote MCcharacter judgy>>
+MC rolls her eyes.
+MC: I hate (and I mean really hate) to agree with Protag, but… he speaks the truth.
+<<mcemote MCcharacter chatty>>
+MC: We need you in the office, Jimothy.
+MC and Protag go in for a group hug with Jimothy, and you smile.
+<<jemote Jcharacter happyflipped>>
+Jimothy: Thanks guys-
+He sniffles.
+Jimothy: You don’t know how much this means to me.
+Jimothy looks up, making eye contact with you.
+You giggle and join the group hug.
+<<if $BigfootRomanceMeter <= 0 && $ProtagRomanceMeter <= 0 && $MCRomanceMeter <= 0>>
+    <<jump AloneBad>>
+<<elseif $MCDate is false && $ProtagDate is false>>
+    <<if $BigfootRomanceMeter < 0>>
+        <<jump AloneBad>>
+    <<endif>>
+<<elseif $BigfootRomanceMeter > $ProtagRomanceMeter && $BigfootRomanceMeter > $MCRomanceMeter>>
+    Jimothy: Thanks again, Y/N.
+	Jimothy: You know, the cave where I live isn’t far from here, if you’d like to come over? Maybe watch a movie?
+	You could have sworn he winked at you.
+    ->Accept
+		<<jump BigfootAccept>>
+	->Decline
+		<<jump BigfootDecline>>
+<<elseif $BigfootRomanceMeter == $ProtagRomanceMeter && $BigfootRomanceMeter == $MCRomanceMeter>>
+    Jimothy: Thanks again, Y/N.
+	Jimothy: You know, the cave where I live isn’t far from here, if you’d like to come over? Maybe watch a movie?
+	You could have sworn he winked at you.
+    ->Accept
+		<<jump BigfootAccept>>
+	->Decline
+		<<jump BigfootDecline>>
+<<elseif $BigfootRomanceMeter == $ProtagRomanceMeter && $BigfootRomanceMeter > $MCRomanceMeter>>
+    Jimothy: Thanks again, Y/N.
+	Jimothy: You know, the cave where I live isn’t far from here, if you’d like to come over? Maybe watch a movie?
+	You could have sworn he winked at you.
+    ->Accept
+		<<jump BigfootAccept>>
+	->Decline
+		<<jump BigfootDecline>>
+<<elseif $BigfootRomanceMeter > $ProtagRomanceMeter && $BigfootRomanceMeter == $MCRomanceMeter>>
+    Jimothy: Thanks again, Y/N.
+	Jimothy: You know, the cave where I live isn’t far from here, if you’d like to come over? Maybe watch a movie?
+	You could have sworn he winked at you.
+    ->Accept
+		<<jump BigfootAccept>>
+	->Decline
+		<<jump BigfootDecline>>
+<<elseif $MCRomanceMeter == $ProtagRomanceMeter>> 
+    <<jump MCandProtag>>
+<<elseif $ProtagDate is true>>
+    <<jump ProtagAskOut>>
+<<elseif $MCDate is true>>
+    <<jump MCAskOut>>
+<<endif>>
+===
+
+title: BigfootAccept
+---
+Y/N: I’d love to.
+You stand on your tiptoes and give him a peck on his cheek.
+Jimothy’s smile widens.
+Jimothy: Great! Let’s go.
+<<if $MCRomanceMeter == $BigfootRomanceMeter && $MCRomanceMeter > $ProtagRomanceMeter>>
+    <<jump MCandJimothy>>
+<<elseif $BigfootRomanceMeter == $ProtagRomanceMeter && $BigfootRomanceMeter > $MCRomanceMeter>>
+    <<jump ProtagAndJimothy>>
+<<elseif $BigfootRomanceMeter >= 1 && $MCRomanceMeter >= 1 && $ProtagRomanceMeter >= 1>>
+    <<jump groupDate>>
+<<endif>>
+You bid farewell to MC and Protag, MC rolls her eyes as she drags Protag away. He pouts, wanting to have seen Jimothy’s place as well.
+<<credits Canvas>>
+===
+
+title: BigfootDecline
+---
+Y/N: Sorry, maybe not tonight!
+Jimothy: No worries, see you at the office tomorrow!
+<<if $ProtagDate is true>>
+    <<jump ProtagAskOut>>
+<<elseif $MCDate is true>>
+    <<jump MCAskOut>>
+<<else>>
+    <<jump AloneGood>>
+<<endif>>
+===
+
+title: ProtagAskOut
+---
+    <<mcemote MCcharacter none>>
+    <<protagposition Pcharacter middle>>
+    <<pemote Pcharacter happy>>
+    <<jemote Jcharacter none>>
+	As you walk back to the road, Protag runs to catch up with you.
+    <<pemote Pcharacter happy>>
+	Protag: Hey, I had fun at the amusement park today!
+	Y/N: Me too!
+    <<pemote Pcharacter sad>>
+	Protag: I was wondering if you wanted to maybe go out again sometime? Just the two of us?
+	Y/N: Like a date?
+    <<jump ProtagAcceptOrDecline>>
+===
+
+title: ProtagAcceptOrDecline
+---
+<<pemote Pcharacter happy>>
+Protag: Precisely! …If you want that is?
+->No
+    Y/N: Sorry, I just don’t see you in a romantic light.
+    Protag smiles.
+    <<pemote Pcharacter happy>>
+	Protag: No worries, Y/N! Can we still hang out as friends?
+	Y/N: Of course!
+	MC and Jimothy catch up to you two and you start chatting away.
+	You notice Jimothy’s smile that once never reached his eyes is now bigger and brighter than ever.
+	The four of you chat about anything and everything as you walk back to the road.
+	Such a whacky group of people, you think to yourself.
+	But you can’t help but love them.
+    <<credits Canvas>>
+->Yes
+	Y/N: Yeah, that sounds lovely!
+	Protag smiles.
+    <<pemote Pcharacter happy>>
+	Protag: Great.
+	Walking next to each other, your hands brush, causing your and his cheeks to turn bright red.
+	A wave of confidence washes over you, and you take his hand, lacing you fingers with his.
+	Not too far behind, MC and Jimothy make kissy sounds at you guys.
+	Although they’re teasing you, you can’t help but laugh.
+	Who could’ve known so much could happen in one day?
+    <<credits Canvas>>
+===
+
+title: MCAskOut
+---
+<<mcposition MCcharacter middle>>
+<<mcemote MCcharacter judgy>>
+<<pemote Pcharacter none>>
+<<jemote Jcharacter none>>
+MC: Hey, Y/N!
+Y/N: Hi, what's up?
+<<mcemote MCcharacter judgy>>
+MC: Listen, I had a lot of fun with you today.
+Y/N: Me too.
+MC: I was wondering if, well...
+MC takes a breath.
+<<mcemote MCcharacter worried>>
+MC: If you wanted to do it again sometime?
+MC: Maybe we can hold hands and stuff.
+Y/N: MC... are you asking me out~
+You smirk at her.
+MC's entire face turns red.
+<<mcemote MCcharacter worried>>
+MC: YES OK STFU
+You laugh.
+Do you want to date MC?
+->Yes
+    Y/N: I'd love to go out with you.
+    MC looks up at you with big eyes.
+    <<mcemote MCcharacter chatty>>
+    MC: Really?
+    You smile and nod.
+    MC: Sweet!!
+    Before thinking, she sweeps you into a big, warm hug.
+    A blush forms on your cheeks.
+    <<mcemote MCcharacter worried>>
+    MC puts you down before blushing herself and then looking away.
+    MC: S-sorry. Got carried away.
+    You smile before placing a kiss on her cheek.
+    Y/N: I don't mind.
+    She stares at you before shaking her head and running away.
+    <<mcemote MCcharacter worried>>
+    MC: SEE YOU TOMORROW!!
+    You can't help but laugh.
+    She's hopeless, isn't she?
+    <<credits Canvas>>
+->No
+    Y/N: Sorry, I think I need some more time to think about it.
+    Y/N: We've only known each other for a day after all!
+    MC pouts.
+    <<mcemote MCcharacter worried>>
+    MC: That's true... well now I'm embarrassed.
+    You pat her arm.
+    Y/N: It's ok, I get it. I'm irresistable!
+    You pretend to toss your hair.
+    <<mcemote MCcharacter chatty>>
+    MC: You're not wrong.
+    <<mcemote MCcharacter worried>>
+    MC: I MEAN-
+    She sighs.
+    <<mcemote MCcharacter bored>>
+    MC: Nevermind.
+    MC: See you tomorrow.
+    <<mcemote MCcharacter none>>
+    She gives you a soft smile before walking away.
+    <<jump AloneGood>>
+===
+
+title: MCandProtag
+---
+<<protagposition Pcharacter left>>
+<<mcposition MCcharacter right>>
+<<mcemote MCcharacter judgy>>
+<<pemote Pcharacter happy>>
+<<jemote Jcharacter none>>
+Jimothy leaves to go back to his cave, leaving you, MC, and Protag alone.
+<<pemote Pcharacter happy>>
+Protag: I can't believe this! Y/N, did you know the whole time?
+Y/N: ...Yeah. He asked me to keep it a secret!
+<<mcemote MCcharacter bored>>
+MC: Well, you did a pretty good job.
+Protag: Yeah, I had no clue!
+<<pemote Pcharacter happy>>
+Protag & MC: Anyways, Y/N, there's something we have to ask you.
+MC: Ew that felt creepy.
+Protag: You liked it.
+Protag wiggles his eyeborws as MC rolls her eyes.
+MC: Sure.
+<<mcemote MCcharacter chatty>>
+MC: Anyways, we were talking and-
+<<pemote Pcharacter mad>>
+Protag: WE BOTH LIKE YOU A LOT AND WERE WONDERING IF YOU WANT TO GO OUT WITH US?!
+Y/N: Oh my
+MC: Thanks for stealing my thunder, Protag.
+<<pemote Pcharacter happy>>
+Protag: Anytime.
+MC: But yeah, what he said. We've both been crushing on you for some time now, and we didn't want to end up in some weird love triangle so we thought, why not throuple up?
+Y/N: Don't you hate Protag, though?
+Protag: Nahhhh, she loves me, it's just a fun little game she likes to play. Isn't that right, sweetieee
+He looks at MC with pleading eyes.
+<<mcemote MCcharacter judgy>>
+MC: Sure. But never do that again.
+You can't help but laugh as you watch the two bicker. It reminds you of an old married couple.
+<<pemote Pcharacter happy>>
+Protag: So, Y/N, what do you say? Throuple?!
+->Hell yeah
+    Y/N: You know what, that actually sounds sick.
+    Protag: Yay!!!!
+    MC: Awesome.
+    <<pemote Pcharacter happy>>
+    Protag: Yeah, this'll be awesome sauce!!
+    <<mcemote MCcharacter bored>>
+    MC: Never say that again.
+    MC reaches out her hand to you.
+    You take it, and reach out your other to Protag.
+    Walking back to the road, you smile, laughing as your arms swing wildly in their hands.
+    <<credits Canvas>>
+->Politely decline
+    <<jump multiDecline>>
+===
+
+title: MCandJimothy
+---
+<<protagposition Pcharacter left>>
+<<mcposition MCcharacter right>>
+<<pemote Pcharacter happy>>
+<<jemote Jcharacter happy>>
+<<mcemote MCcharacter judgy>>
+MC: A-actually, hold on.
+You turn around, surprised.
+MC: I-I'd like to come with you... if it's not too much trouble...
+You've never seen her look so shy.
+<<mcemote MCcharacter worried>>
+MC: Not that I like you guys or anything!! I just want to get away from Protag.
+Jimothy looks at you.
+<<jemote Jcharacter happy>>
+Jimothy: What do you think, Y/N?
+->Yes
+    Y/N: Get over here, MC!
+    <<pemote Pcharacter sad>>
+    Protag: No fair, I wanna see his place too!
+    Jimothy: Erm... maybe another time, Protag!
+    Jimothy: A more official get together!
+    <<pemote Pcharacter happy>>
+    Protag: Ooooo, ok!
+    Protag: See you guys later, then!
+    Protag moves to leave before suddenly stopping.
+    He slowly turns around.
+    <<pemote Pcharacter confused>>
+    Protag: WAIT A MINUTE!
+    Everyone: ...
+    <<pemote Pcharacter frightened>>
+    Protag: Are you guys... IN LOVE?!
+    If you guys had been drinking water it would've been a triple spit take.
+    MC: PROTAG, GO AWAY!
+    Protag runs up to Jimothy and MC.
+    <<pemote Pcharacter sad>>
+    Protag: Just... treat Y/N right, will ya?
+    <<pemote Pcharacter mad>>
+    Protag: If you break Y/N's heart...
+    Protag: Why I oughta...
+    He shakes his fist.
+    <<jemote Jcharacter happy>>
+    Jimothy: Roger that.
+    He says, trying to hold back a laugh.
+    <<mcemote MCcharacter bored>>
+    MC: Fine, now get outta here.
+    <<pemote Pcharacter none>>
+    Protag salutes you guys before running away laughing.
+    Jimothy: Well...
+    <<jemote Jcharacter happyflipped>>
+    Jimothy: Shall we?
+    You make your way towards his home, hand in hand whith him and MC.
+    Who woulda thought you'd end up with two babes by your side today?
+    <<credits Canvas>>
+->No
+    <<jump TwoDecline>>
+===
+
+title: ProtagAndJimothy
+---
+<<protagposition Pcharacter left>>
+<<mcposition MCcharacter right>>
+<<mcemote MCcharacter judgy>>
+<<pemote Pcharacter happy>>
+<<jemote Jcharacter happy>>
+Jimothy: Wait.
+He turns around.
+<<jemote Jcharacter happyflipped>>
+Jimothy: Protag, do you actually want to come?
+<<pemote Pcharacter happy>>
+Protag: Yes!
+Jimothy turns to you.
+Jimothy: Y/N, would you be ok with that?
+->Yes
+    Y/N: Of course!
+    Protag: SLAY
+    He runs up to you, swooping your hand into his.
+    Protag: This is gonna be sick!
+    <<mcemote MCcharacter bored>>
+    MC: Ew. You lovesick bitches are insufferable.
+    You all giggle.
+    MC: Welp, have fun, I'll see you guys in the office tomorrow.
+    <<mcemote MCcharacter judgy>>
+    MC: Don't stay up too late.
+    She gives you guys a knowing look.
+    You and Jimothy blush.
+    <<pemote Pcharacter flustered>>
+    Protag: SHUT UP, MC!
+    MC laughs as she walks away.
+    <<mcemote MCcharacter none>>
+    Jimothy sighs.
+    Jimothy: Well, shall we?
+    He leads you and Protag towards his home.
+    You end up with dad bod and the twink. Lucky you.
+    <<credits Canvas>>
+->No
+    <<jump TwoDecline>>
+===
+
+title: groupDate
+---
+<<protagposition Pcharacter left>>
+<<mcposition MCcharacter right>>
+<<mcemote MCcharacter judgy>>
+<<pemote Pcharacter happy>>
+<<jemote Jcharacter happy>>
+Jimothy: Wait, actually.
+He turns around.
+<<jemote Jcharacter happyflipped>>
+Jimothy: Protag, MC, would you guys like to come with us?
+<<pemote Pcharacter happy>>
+Protag: Yes!
+<<mcemote MCcharacter bored>>
+MC: I mean, it's not like I have anything better to do, so...
+Jimothy: Great, is it alright with you, Y/N?
+He looks at you, smiling.
+->Yes
+    Y/N: Of course! The more the merrier!
+    <<jemote Jcharacter happy>>
+    Jimothy: Great!
+    MC walks up to you and grabs your hand.
+    <<mcemote MCcharacter worried>>
+    MC: D-don't get it twisted, I definitely did NOT fall in love with you guys in the course of one day!!
+    Protag: I did. Y'all are great!
+    You all giggle.
+    What a great ending to an... odd day.
+    <<credits Canvas>>
+->No
+    <<jump TwoDecline>>
+===
+
+title: noDate
+---
+<<background bgs street>>
+<<mcemote MCcharacter none>>
+<<pemote Pcharacter none>>
+<<jemote Jcharacter none>>
+You walk home, breathing in the cool fresh air.
+Your thoughts are immediately interrupted when you notice a shadowy Jimothy shaped figure in the woods.
+You figure you could go say hi, but before you know it, Protag sprints past you.
+Y/N: Protag?!
+<<pemote Pcharacter frightened>>
+Protag: IT'S BIGFOOT.
+<<pemote Pcharacter none>>
+You suddenly notice MC is not far behind.
+<<mcemote MCcharacter mad>>
+MC: PROTAG, SLOW DOWN!
+<<mcemote MCcharacter none>>
+Y/N: Ah crap.
+You murmur to yourself before quickly following them into the woods.
+<<jump BigfootConvo>>
+===
+
+title: AloneGood
+---
+<<mcemote MCcharacter none>>
+<<pemote Pcharacter none>>
+<<jemote Jcharacter none>>
+<<background bgs street>>
+You walk home by yourself.
+You take a deep breath and the cool air tickles your nostrils.
+Y/N: (What a day...)
+You think to yourself.
+Y/N: (Jimothy... and Protag... and of course MC...)
+Smiling, you shake your head.
+Y/N: (I think I'm gonna like working here.)
+<<credits Canvas>>
+===
+
+title: AloneBad
+---
+<<mcemote MCcharacter none>>
+<<pemote Pcharacter none>>
+<<jemote Jcharacter none>>
+<<background bgs street>>
+You walk home feeling a twinge of saddness in your chest.
+You can't help but wonder if things could have ended up differently...
+Oh well, not like you can go back and redo it...
+<<credits Canvas>>
+===
+
+title: multiDecline
+---
+Sorry, but I'm a lone wolf.
+    You howl at the moon.
+    Y/N: AWROOOOOOOO!!!
+    The others: ...
+    You scamper away on all fours.
+    Little did they know your ACTUALLY A WEREWOLF?!!!!
+    Looks like Jimothy wasn't the only mythical being with secrets around here...
+    To be continued...
+    <<credits Canvas>>
+===
+
+title: highInvestigation
+---
+<<protagposition Pcharacter left>>
+<<mcposition MCcharacter right>>
+<<background bgs office>>
+<<mcemote MCcharacter judgy>>
+<<pemote Pcharacter happy>>
+<<jemote Jcharacter none>>
+MC & Protag: Y/N! Come to the meeting room with us.
+<<pemote Pcharacter mad>>
+Protag: This is important.
+They're faces both show that they are not messing around.
+You silently follow them, not sure of what they are up to.
+<<background bgs meetingRoom>>
+<<jemote Jcharacter sad>>
+Jimothy stands at the end of the table, he makes eye contact before looking away sadly.
+<<mcemote MCcharacter judgy>>
+MC: Alright, now that we've gathered you all here...
+<<pemote Pcharacter happy>>
+Protag: We've made progress with the Bigfoot case, and we wanted to share the... interesting results with you two.
+Jimothy gulps loudly.
+Protag: Jimothy, where were you the night of yesterday?!
+Jimothy: I-I went home!
+Protag: Interesting...
+<<mcemote MCcharacter chatty>>
+MC: Did you know Protag has access to all the city's surveillance cameras?
+<<pemote Pcharacter happy>>
+Protag: It's true, I do!
+Jimothy: WHA- WHY??
+Protag: Doesn't matter! What matters is that you never did go home last night, did you?
+He smirks.
+Protag: Our records indicate that you disappeared into the woods.
+<<mcemote MCcharacter judgy>>
+MC: Gasp...
+You give her a look.
+Jimothy stands quietly.
+<<pemote Pcharacter mad>>
+Protag: I HAVE BROKEN THE CASE!
+Protag clears his throat.
+<<pemote Pcharacter happy>>
+Protag: Bigfoot IS real! If it weren't for Y/N's side comments throughout the day, then I never would've figured out that...
+Protag points at Jimothy.
+Protag: You are Bigfoot!!
+Jimothy looks at you before sniffling and running away.
+<<jemote Jcharacter none>>
+You watch as he leaves, and you feel a pit in your stomach.
+<<pemote Pcharacter mad>>
+MC and Protag glare at you before chasing after him, but something tells you to stay out of it.
+<<mcemote MCcharacter none>>
+<<pemote Pcharacter none>>
+No need to make things worse.
+You walk home, feeling drained.
+If only there was a way you could have prevented this... sigh.
+<<credits Canvas>>
+===
+
+title: TwoDecline
+---
+<<protagposition Pcharacter left>>
+<<mcposition MCcharacter right>>
+<<mcemote MCcharacter judgy>>
+<<pemote Pcharacter happy>>
+<<jemote Jcharacter happy>>
+You look at MC and Protag, then back to Jimothy.
+Sorry, babes, he's all mine.
+You place a hand on his chest window.
+MC: That's fine, whatever not like I actually considered it...
+<<pemote Pcharacter sad>>
+Protag: Sigh... the price of young love...
+You and Jimothy blush.
+MC: You're the same age as them.
+<<pemote Pcharacter happy>>
+Protag: Andddddd... we are ALL young!
+<<pemote Pcharacter none>>
+<<mcemote MCcharacter none>>
+The two continue bickering as they walk away.
+You look at Jimothy and burst out in laughter.
+He takes your hand and guides you deeper into the woods towards his home.
+What a gentleman.
+<<credits Canvas>>
+===
