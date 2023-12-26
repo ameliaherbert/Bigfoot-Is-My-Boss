@@ -15,15 +15,17 @@ public class StateController : MonoBehaviour
     public Vector2 LeftSide;
     public Vector2 RightSide;
     public Vector2 Middle;
-    
+    public Positions currentPosition;
 
-    // Start is called before the first frame update
-    void Start()
+    public enum Positions
     {
-        
+        Right,
+        Left,
+        Middle
     }
 
     // Update is called once per frame
+    // Sets local positions to locations set in Unity
     void Update()
     {
         switch (currentPosition)
@@ -42,15 +44,7 @@ public class StateController : MonoBehaviour
         }
     }
 
-    public enum Positions
-    {
-        Right,
-        Left,
-        Middle
-    }
-
-    public Positions currentPosition;
-
+    // Uses yarn command to change coordinates of sprites on screen
     [YarnCommand("mcposition")]
     public void SwitchPosition(string Position)
     {
@@ -67,10 +61,4 @@ public class StateController : MonoBehaviour
                 break;
         }
     }
-
-    
-
-
-
-
 }

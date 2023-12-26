@@ -15,9 +15,6 @@ public class ChangeBG : MonoBehaviour
 {
     public Sprite None;
     public Sprite Office;
-    public Sprite Restaurant;
-    public Sprite Breakroom;
-    public Sprite Closet;
     public Sprite Cubicles;
     public Sprite Elevator;
     public Sprite Forest;
@@ -32,132 +29,88 @@ public class ChangeBG : MonoBehaviour
     public float FadeInTime = 1f;
     private bool visible = false;
 
-    //while alpha is less than 1, fade bg in
+    // While alpha is less than 1, fade bg (background) in
     IEnumerator DoFadeIn( SpriteRenderer _sprite)
     {
         Color tmpColor = _sprite.color;
         float startTime = Time.time;
 
-        //While time continues, fade color
-        while(tmpColor.a < 1f)
+        // While time continues, fade alpha
+        while (tmpColor.a < 1f)
         {
-            tmpColor.a = Mathf.Lerp(0f, 1f, (Time.time - startTime) / FadeOutTime);
+            // Assuming a value from 0 to 1 in small incrememnts as time changes
+            tmpColor.a = (Time.time - startTime) / FadeOutTime;
             _sprite.color = tmpColor;
 
             yield return null;
-            
         }
         visible = true;
         _sprite.color = tmpColor;
-
     }
 
 
-    //fade bg out if alpha
+    // Fade bg out if alpha
     IEnumerator DoFadeOut(SpriteRenderer _sprite)
     {
         Color tmpColor = _sprite.color;
         float startTime = Time.time;
-        float tmp;
 
         while (tmpColor.a > 0f)
         {
-            tmp = Mathf.Lerp(0f, 1f, (Time.time - startTime) / FadeInTime);
-            tmpColor.a = 1f - tmp;
+            // Assuming a value from 1 to 0 in small incrememnts as time changes
+            tmpColor.a = 1.0f - (Time.time - startTime) / FadeOutTime;
             _sprite.color = tmpColor;
 
             yield return null;
         }
-
         visible = false;
         _sprite.color = tmpColor;
-
     }
 
-    //background switching
+    // Background switching
     IEnumerator doBGFade(string bg)
     {
-
         StartCoroutine(DoFadeOut(GetComponent<SpriteRenderer>()));
 
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(0.5f);
 
         visible = false;
 
-        if (bg == "none")
-        {
+        if (bg == "none") {
             GetComponent<SpriteRenderer>().sprite = None;
-        }
-        if (bg == "office")
-        {
+        } else if (bg == "office") {
             GetComponent<SpriteRenderer>().sprite = Office;
-        }
-        if (bg == "restaurant")
-        {
-            GetComponent<SpriteRenderer>().sprite = Restaurant;
-        }
-        if (bg == "breakroom")
-        {
-            GetComponent<SpriteRenderer>().sprite = Breakroom;
-        }
-        if (bg == "closet")
-        {
-            GetComponent<SpriteRenderer>().sprite = Closet;
-        }
-        if (bg == "cubicles")
-        {
+        } else if (bg == "cubicles") {
             GetComponent<SpriteRenderer>().sprite = Cubicles;
-        }
-        if (bg == "elevator")
-        {
+        } else if (bg == "elevator") {
             GetComponent<SpriteRenderer>().sprite = Elevator;
-        }
-        if (bg == "forest")
-        {
+        } else if (bg == "forest") {
             GetComponent<SpriteRenderer>().sprite = Forest;
-        }
-        if (bg == "street")
-        {
+        } else if (bg == "street") {
             GetComponent<SpriteRenderer>().sprite = Street;
-        }
-        if (bg == "river")
-        {
+        } else if (bg == "river") {
             GetComponent<SpriteRenderer>().sprite = RiverScene;
-        }
-        if (bg == "meetingRoom")
-        {
+        } else if (bg == "meetingRoom") {
             GetComponent<SpriteRenderer>().sprite = MeetingRoom;
-        }
-
-        if (bg == "jOffice")
-        {
+        } else if (bg == "jOffice") {
             GetComponent<SpriteRenderer>().sprite = JOffice;
-        }
-
-        if (bg == "aquarium")
-        {
+        } else if (bg == "aquarium") {
             GetComponent<SpriteRenderer>().sprite = Aquarium;
-        }
-
-        if (bg == "amusementPark")
-        {
+        } else if (bg == "amusementPark") {
             GetComponent<SpriteRenderer>().sprite = AmusementPark;
         }
 
         StartCoroutine(DoFadeIn(GetComponent<SpriteRenderer>()));
 
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(0.5f);
 
         visible = true;
     }
 
-
-    //starts coroutine for bg fade
+    // Starts coroutine for bg fade
     [YarnCommand("background")]
     public void ChangeBackground(string bg)
     {
-
         StartCoroutine(doBGFade(bg));
-        
     }
 }
